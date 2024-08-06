@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className='mt-5' style={{ background: "black", color: "white" }}>
             <div className='container d-flex flex-row justify-content-center py-5'>
-                <img src={logo} alt={logo} style={{ width: "20rem", height: "8rem", margin: "auto" }} />
+                <img src={logo} alt={logo} style={{ width: "12rem", height: "6rem", margin: "auto" }} />
                 <div className='d-flex flex-column text-center w-25'>
                     <h2>Quick Menu</h2>
                     <p>Home</p>

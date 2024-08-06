@@ -7,6 +7,7 @@
 font-family: "Tiro Devanagari Marathi", serif;
 }
 
+
 .nav_heading {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -21,4 +22,8 @@ font-family: "Tiro Devanagari Marathi", serif;
 .nav_heading.active {
   background-color: white;
   color: black;
+}
+
+@media (max-width:1025){
+  /* navbar */
 }

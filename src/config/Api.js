@@ -20,6 +20,12 @@ import t1 from "../images/Testmonial/t1.png"
 import t2 from "../images/Testmonial/t2.png"
 import t3 from "../images/Testmonial/t3.png"
 
+// Team
+import team1 from "../images/About/Teams/t1.jpg";
+import team2 from "../images/About/Teams/t2.jpg";
+import team3 from "../images/About/Teams/t3.jpg";
+
+
 
 
 
@@ -117,4 +123,88 @@ const testmonial = [
     },
 ]
 
-export { Progrm_section, Benefits_section, testmonial }
+const Team = [
+    {
+        img: team1,
+        name: "CA Vasu Deo Sharma"
+    },
+    {
+        img: team2,
+        name: "Dr. Rakesh Trehan"
+    },
+    {
+        img: team3,
+        name: "Kundan Kumar Jha"
+    }
+]
+
+const ProgramTypes = [
+    {
+        title: "Executive Wellness Coaching",
+        description: "Executive Wellness Coaching offers personalized guidance to senior leaders, focusing on physical health, mental resilience, and emotional well-being. Our certified wellness coaches work one-on-one with executives to develop tailored plans.",
+        key_features: [
+            "Personalized wellness assessments",
+            "Stress management techniques",
+            "Nutrition and fitness plans",
+            "Mindfulness and meditation practices",
+            "Regular progress tracking and adjustments"
+        ]
+    },
+    {
+        title: "Leadership Health Retreats",
+        description: "Our Leadership Health Retreats provide an immersive wellness experience, designed to rejuvenate and refresh corporate leaders. Set in serene locations, these retreats offer a perfect blend of relaxation, wellness activities, and leadership development.",
+        key_features: [
+            "Holistic health workshops",
+            "Yoga and meditation sessions",
+            "Nutritional counselling",
+            "Outdoor activities and adventure sports",
+            "Networking opportunities with other leaders"
+        ]
+    },
+    {
+        title: "Corporate Wellness Workshops",
+        description: "These workshops are designed to integrate wellness into the corporate culture. We offer a series of interactive sessions that cover various aspects of wellness, aimed at equipping leaders with the knowledge and tools to promote well-being.",
+        key_features: [
+            "Stress management and resilience training",
+            "Work-life balance strategies",
+            "Nutrition and fitness education",
+            "Mental health awareness",
+            "Creating a wellness-centric corporate culture"
+        ]
+    },
+    {
+        title: "Mental Health Advocacy",
+        description: "Mental health is a critical component of overall well-being. Our programs focus on breaking the stigma around mental health issues and providing leaders with the skills to support their teams effectively.",
+        key_features: [
+            "Mental health first aid training",
+            "Workshops on recognizing and addressing mental health issues",
+            "Creating supportive workplace environments",
+            "Access to professional counselling services",
+            "Brain Games for Mind-fullness & boosting up the Brain"
+        ]
+    },
+    {
+        title: "Digital Wellness Solutions",
+        description: "In today’s digital age, managing screen time and digital distractions is vital. Our Digital Wellness Solutions help leaders and their teams develop healthy digital habits, enhancing productivity and well-being.",
+        key_features: [
+            "Digital Detox Programs",
+            "Training on Healthy Screen Time Management",
+            "Tools and Apps for Digital Well-Being",
+            "Workshops on Balancing Technology Use"
+        ]
+    },
+    {
+        title: "Programs for Universities & Colleges",
+        description: "Wellness services for students are essential in supporting their mental, physical, and emotional well-being, especially given the various pressures and challenges they face.",
+        key_features: [
+            "Mental Health Awareness Campaigns",
+            "Wellness Workshop and Activities",
+            "Physical Health Promotion",
+            "Substance Abuse Prevention",
+            "Sexual Health and Violence Prevention"
+        ]
+    }
+];
+
+
+export { Progrm_section, Benefits_section, testmonial, Team }
