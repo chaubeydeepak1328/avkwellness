@@ -11,6 +11,14 @@ const About = () => {
         <div>
             <div className='w-100' style={{ position: "relative" }}>
                 <img className='w-100' src={dash_img} alt={dash_img} />
+                <div style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: "rgba(0, 0, 0, 0.4)"
+                }}></div>
                 <h1 className='text-white' style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>About US</h1>
             </div>
 

@@ -27,3 +27,58 @@ font-family: "Tiro Devanagari Marathi", serif;
 @media (max-width:1025){
   /* navbar */
 }
+
+
+/* Programs ============================== */
+.custom-list {
+  list-style: none;
+  /* Remove default list style */
+  padding-left: 1.5em;
+  /* Add padding to accommodate custom bullets */
+}
+
+.custom-list li {
+  position: relative;
+  /* Position relative to position the ::before element */
+  padding-left: 1.5em;
+  /* Add padding to accommodate custom bullets */
+}
+
+.custom-list li::before {
+  content: '';
+  /* No text content, just a visual */
+  position: absolute;
+  /* Position relative to the li element */
+  left: 0;
+  /* Align to the left */
+  top: 0.6em;
+  /* Adjust to vertically center the bullet */
+  width: 0.6em;
+  /* Width of the outer disk */
+  height: 0.6em;
+  /* Height of the outer disk */
+  background-color: white;
+  /* Color of the outer disk */
+  border-radius: 50%;
+  /* Make it a circle */
+  display: flex;
+  /* Use flex to center the inner dot */
+  align-items: center;
+  /* Center the inner dot vertically */
+  justify-content: center;
+  /* Center the inner dot horizontally */
+}
+
+.custom-list li::before::after {
+  content: '';
+  /* No text content, just a visual */
+  padding: 0.1em;
+  width: 0.2em;
+  /* Width of the inner dot */
+  height: 0.2em;
+  /* Height of the inner dot */
+  background-color: white;
+  /* Color of the inner dot */
+  border-radius: 50%;
+  /* Make it a circle */
+}
