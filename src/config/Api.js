@@ -318,43 +318,106 @@ const keyComp = [
 const teamMembers = [
     {
         img: tm1,
-        "name": "Dr. Rakesh Trehan",
-        "title": "CHAIRMAN",
-        "socialMedia": [
-            "Facebook-f",
-            "Twitter",
-            "Instagram",
-            "Youtube"
-        ],
-        "description": "Dr. Rakesh Kumar Trehan is the Chairman and Managing Director of Trehan Global Limited in Delhi. He also serves as Chairman of Prudence School, Meera Bagh, and Consultant to Delhi Metro Rail Corporation. Additionally, he is a Governing Council Member at NARDECO and CSR Regional Head for North India at Lions Club International Foundation.",
+        name: "Dr. Rakesh Trehan",
+        title: "CHAIRMAN",
+        description: "Dr. Rakesh Kumar Trehan is the Chairman and Managing Director of Trehan Global Limited in Delhi. He also serves as Chairman of Prudence School, Meera Bagh, and Consultant to Delhi Metro Rail Corporation. Additionally, he is a Governing Council Member at NARDECO and CSR Regional Head for North India at Lions Club International Foundation.",
     },
     {
         img: tm2,
-        "name": "CA Basu Deo Sharma",
-        "title": "FOUNDER & DIRECTOR",
-        "socialMedia": [
-            "Facebook-f",
-            "Twitter",
-            "Instagram",
-            "Youtube"
-        ],
-        "description": "Engaged in the profession of Chartered Accountancy since 1984. Having vast experience of accountancy, taxation, finance and management consultancy. Presently CFO of Innerkraft Health Private Limited. This is a start up engaged in the business of mental wellness.",
+        name: "CA Basu Deo Sharma",
+        title: "FOUNDER & DIRECTOR",
+        description: "Engaged in the profession of Chartered Accountancy since 1984. Having vast experience of accountancy, taxation, finance and management consultancy. Presently CFO of Innerkraft Health Private Limited. This is a start up engaged in the business of mental wellness.",
 
     },
     {
         img: tm3,
-        "name": "Kundan Kumar Jha",
-        "title": "Founder CEO",
-        "socialMedia": [
-            "Facebook-f",
-            "Twitter",
-            "Instagram",
-            "Youtube"
+        name: "Kundan Kumar Jha",
+        title: "Founder CEO",
+        description: "Kundan Kumar Jha brings exceptional skills in managing multiple priorities and a proactive approach to team collaboration, consistently delivering outstanding results. His extensive experience includes advisory roles at Lookman Electroplast and Get Power in Chennai, and serving as CEO of Drishti Creative Productions Pvt Ltd. Kundan has successfully organized high-profile events like the Indraprasth Sahitya Mahotsav and significant healthcare programs featuring top Indian doctors and ministers. His notable achievements include an entry in the India Books of Records for uniting the maximum number of Members of Parliament. Kundan is dedicated to sustainable B2G business initiatives across India, South East Asia, and Africa.",
+    }
+];
+
+
+const services = [
+    {
+        "name": "VITAL",
+        "contact": "CONTACT FOR BOOKING",
+        "targetAudience": "For Government Departments/ Embassies",
+        "includes": [
+            "One day Seminar / Group Sessions/ Wellness Activities with our empaneled experts and Agencies",
+            "Spiritual Guru and Yoga Guru Charges Endorsement extra as Per Actual",
+            "Mind Healing and Brain Games",
+            "Venue and Refreshment to be arranged by the clients",
+            "Free Access to Wellness app for all Employees for 1 year"
         ],
-        "description": "Kundan Kumar Jha brings exceptional skills in managing multiple priorities and a proactive approach to team collaboration, consistently delivering outstanding results. His extensive experience includes advisory roles at Lookman Electroplast and Get Power in Chennai, and serving as CEO of Drishti Creative Productions Pvt Ltd. Kundan has successfully organized high-profile events like the Indraprasth Sahitya Mahotsav and significant healthcare programs featuring top Indian doctors and ministers. His notable achievements include an entry in the India Books of Records for uniting the maximum number of Members of Parliament. Kundan is dedicated to sustainable B2G business initiatives across India, South East Asia, and Africa.",
+        card_style: { card_color: "white", card_bg: "#D67D9D", btn_bg: "black", btn_color: "white", card_list_btn: "green", incl_color: "gray" }
+    },
+    {
+        "name": "THRIVE",
+        "contact": "CONTACT FOR BOOKING",
+        "targetAudience": "For Corporate / Non-Government Organisations (NGO)",
+        "includes": [
+            "One day Seminar / Group Sessions/ Wellness Activities up to 200 Persons with our empaneled experts and Agencies",
+            "Spiritual Guru and Yoga Guru Charges Endorsement extra as Per Actual",
+            "Mind Healing and Brain Games",
+            "Venue and Refreshment to be Arranged by the clients",
+            "Free Access to Wellness app for all Employees for 1 Year"
+        ],
+        card_style: { card_color: "black", card_bg: "#65A29D", btn_bg: "#65A29D", btn_color: "black", card_list_btn: "#D67D9D", incl_color: "black" }
+    },
+    {
+        "name": "BEACON",
+        "contact": "CONTACT FOR BOOKING",
+        "targetAudience": "For Universities, Colleges & Schools",
+        "includes": [
+            "Mental Health Awareness Campaigns",
+            "Workshop Sexual Health and concerning Socio-Psychological Understanding",
+            "Violence Prevention",
+            "Physical Health Promotion",
+            "Substance Abuse Prevention"
+        ],
+        card_style: { card_color: "white", card_bg: "#D67D9D", btn_bg: "black", btn_color: "white", card_list_btn: "green", incl_color: "gray" }
+    },
+    {
+        "name": "TAMANNA",
+        "contact": "LAUNCHING SOON",
+        "targetAudience": "For Terminal illness Patient from Elite Class",
+        "includes": [
+            "Weekends / Group Sessions/ Wellness Activities up to 100 Persons with our empaneled experts and Agencies",
+            "Spiritual Guru, Yoga Guru & Celebrities Sessions",
+            "Mind Healing and Brain Games by Mind Peers",
+            "Venue and Refreshment",
+            "Free Access to Wellness app entire life"
+        ],
+        card_style: { card_color: "black", card_bg: "#65A29D", btn_bg: "#65A29D", btn_color: "black", card_list_btn: "#D67D9D", incl_color: "black" }
+    },
+    {
+        "name": "EXPONENT",
+        "contact": "LAUNCHING SOON",
+        "targetAudience": "For International Package",
+        "includes": [
+            "10 Days India Holistic Healing Tour including Yoga Meditation and Naturopathy",
+            "Group Session Interaction with Renowned Spiritual Leaders of India",
+            "Full support for Aayush VISA, Hotel Booking, Travelling and Entry passes"
+        ],
+        card_style: { card_color: "white", card_bg: "#D67D9D", btn_bg: "black", btn_color: "white", card_list_btn: "green", incl_color: "gray" }
+    },
+    {
+        "name": "REVITAL",
+        "contact": "LAUNCHING SOON",
+        "targetAudience": "For Individual Registration for Group Programme",
+        "includes": [
+            "3 Days Seminar / Group Sessions/ Wellness Activities up to 300 Persons with our empaneled experts and Agencies",
+            "Spiritual Guru, Yoga Guru & Celebrities Sessions",
+            "Mind Healing and Brain Games by Mind Peers",
+            "Venue and Refreshment",
+            "Free Access to Wellness app entire life"
+        ],
+        card_style: { card_color: "black", card_bg: "#65A29D", btn_bg: "#65A29D", btn_color: "black", card_list_btn: "#D67D9D", incl_color: "black" }
     }
 ];
 
 
 
-export { Progrm_section, Benefits_section, testmonial, Team, ProgramTypes, keyComp, teamMembers }
+
+export { Progrm_section, Benefits_section, testmonial, Team, ProgramTypes, keyComp, teamMembers, services }
