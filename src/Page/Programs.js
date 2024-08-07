@@ -32,21 +32,21 @@ const Programs = () => {
                     <p>As a corporate leader, your well-being is crucial not only for your own success but also for the success of your organization. Our Wellness Advocacy Program is designed to support you in managing stress, enhancing your mental and physical health, and fostering a balanced lifestyle.
                         Our Wellness Advocacy Programs aimed at Corporate Leaders should focus on specific areas that resonate with their responsibilities, stress levels, and the high-pressure environment they navigate.</p>
 
-                    <p style={{ color: "#D67D9D", padding: "0 7rem" }}>"Leaders and people, they manage must be in excellent health. The irony is that "health is the real wealth" is the most well-known yet uncommon practice in our way of life".</p>
+                    <p className='px-3  px-lg-5 mx-lg-5' style={{ color: "#D67D9D" }}>"Leaders and people, they manage must be in excellent health. The irony is that "health is the real wealth" is the most well-known yet uncommon practice in our way of life".</p>
                 </div>
 
                 <div className='container mt-5'>
                     <h1 className='text-center' style={{ color: "#65A29D" }}>Wellness Advocacy Programs</h1>
-                    <h4 className='text-center' style={{ color: "#D67D9D" }}>Overview</h4>
+                    <h4 className='text-center' style={{ color: "#D67D9D", fontWeight: "600" }}>Overview</h4>
                     <p>Our Wellness Advocacy Programs are meticulously crafted to cater to the unique needs of corporate leaders and employees in India. These programs aim to foster a holistic approach to well-being, ensuring that leaders and their team are not only at their peak performance but also embody wellness practices that inspire their teams.</p>
                 </div>
 
                 <div className='container mt-5'>
-                    <h2 className='text-center' style={{ color: "#D67D9D" }}>Program Types</h2>
+                    <h2 className='text-center' style={{ color: "#D67D9D", }}>Program Types</h2>
                     <div className='d-flex flex-wrap gap-5 justify-content-center' style={{ marginTop: "5rem" }}>
                         {ProgramTypes.map((curElm, index) => {
                             return (
-                                <div className="card col-5 p-5" style={{ background: "#D67D9D", color: "white" }} key={index}>
+                                <div className="card col-12 col-lg-5 p-5" style={{ background: "#D67D9D", color: "white" }} key={index}>
 
                                     <img className='card-img-top' src={curElm.img} alt={curElm.img} />
 
@@ -76,12 +76,12 @@ const Programs = () => {
             </div>
 
             <div style={{ background: "#f5f5f5" }}>
-                <div className='container d-flex flex-column' style={{ marginTop: "5rem", paddingTop: "5rem" }}>
+                <div className='container d-flex flex-column ' style={{ marginTop: "5rem", paddingTop: "5rem" }}>
                     <h2 className='text-center mb-5' style={{ color: "#65A29D" }}>Key Components</h2>
-                    <div className='d-flex flex-wrap gap-5 justify-content-centers' style={{ margin: "auto" }}>
+                    <div className='d-flex flex-wrap gap-5' style={{ margin: "auto" }}>
                         {keyComp.map((curElm, index) => {
                             return (
-                                <div className='card' style={{ width: "25rem" }} key={index}>
+                                <div className='card col-12 col-lg-3' key={index}>
                                     <img className='card-img-top' src={curElm.img} alt={curElm.img} />
                                     <div className='card-body'>
                                         <h3 className='card-title text-center' style={{ color: "#65A29D" }}>{curElm.title}</h3>
@@ -107,8 +107,8 @@ const Programs = () => {
 
 
 
-            <div className='container d-flex gap-5 justify-content-center'>
-                <div className='col-5'>
+            <div className='row px-2 px-lg-5 d-flex gap-5 justify-content-center'>
+                <div className='col-12 col-lg-5'>
                     <div className='d-flex gap-2'><hr style={{ width: "5rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h6 style={{ fontSize: "1.4rem", color: "#65a29d" }}>HELP</h6></div>
                     <h1 style={{ color: "#d67d9d" }}>Join the Wellness Advocacy Program</h1>
                     <p>We invite all corporate and government organizations to join us in this transformative journey towards better health and well-being. Together, we can create a healthier, happier, and more productive workforce for a brighter future</p>
@@ -116,7 +116,7 @@ const Programs = () => {
                         <button type="button" class="btn " style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", paddingBottom: "0", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Contact Us</p> <span className='fw-bold'>{'>'}</span></button>
                     </div>
                 </div>
-                <div className='col-5'>
+                <div className='col-12 col-lg-5'>
                     <img className='w-100' src={yoga} alt={yoga} />
                 </div>
             </div>

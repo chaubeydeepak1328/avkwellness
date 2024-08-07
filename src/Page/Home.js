@@ -27,8 +27,8 @@ const Home = () => {
             </div>
 
             {/* Program */}
-            <div className='container' style={{ padding: "0 8rem", marginTop: '5rem' }}>
-                <div className='d-flex  flex-row justify-content-between'>
+            <div className='px-4' style={{ marginTop: '5rem' }}>
+                <div className='d-flex flex-row justify-content-between px-lg-5 mx-lg-5'>
                     <div>
                         <div className='d-flex gap-2'><hr style={{ width: "2.4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>PROGRAMS</h2></div>
                         <h1 style={{ color: "#d67d9d" }}>Wellness Advocacy Programs</h1>
@@ -38,7 +38,7 @@ const Home = () => {
                 <div className='d-flex flex-wrap gap-5 justify-content-center'>
                     {Progrm_section.map((curElm, index) => {
                         return (
-                            <div key={index} class="card" style={{ width: "20rem" }}>
+                            <div key={index} class="card col-12 col-lg-3">
                                 <img class="card-img-top" src={curElm.img} alt={curElm.img} />
                                 <div class="card-body">
                                     <h5 class="card-title">{curElm.title}</h5>
@@ -58,39 +58,41 @@ const Home = () => {
 
 
             {/* Benefits */}
-            <div className='container mt-5' style={{ padding: "0 9rem", marginTop: "10rem" }}>
-                <div className='d-flex  flex-row justify-content-between'>
+            <div className='row d-flex justify-content-center' style={{ marginTop: "10rem" }}>
+                <div className='d-flex flex-row justify-content-between col-12 px-lg-5 mx-lg-5 px-5'>
                     <div>
-                        <div className='d-flex gap-2'><hr style={{ width: "4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>BENEFITS</h2></div>
+                        <div className='d-flex gap-2'>
+                            <hr style={{ width: "4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d" }} />
+                            <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>BENEFITS</h2>
+                        </div>
                         <h1>Benefits of the Program</h1>
                     </div>
                 </div>
                 <div className='d-flex flex-wrap gap-5 justify-content-center'>
-                    {Benefits_section.map((curElm, index) => {
-                        return (
-                            <div key={index} class="card d-flex flex-row" style={{ width: "30rem" }}>
-                                <div className='w-50'>
-                                    <img class="card-img-top" src={curElm.img} alt={curElm.img} />
-                                </div>
-                                <div class="card-body w-50">
-                                    <h5 class="card-title">{curElm.title}</h5>
-                                    <p class="card-text">{curElm.description}</p>
-                                </div>
+                    {Benefits_section.map((curElm, index) => (
+                        <div key={index} className='card benefit_card d-flex  flex-lg-row col-11 col-lg-5 col-xxl-3'>
+                            <div className='col-12 col-lg-5'>
+                                <img className='card-img-top' src={curElm.img} alt={curElm.img} />
                             </div>
-                        )
-                    })}
+                            <div className='card-body w-100'>
+                                <h5 className='card-title'>{curElm.title}</h5>
+                                <p className='card-text'>{curElm.description}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
 
+
             {/* Testmonial */}
-            <div className='container mt-5' style={{ marginTop: "5rem" }}>
+            <div className='mt-5 px-5' style={{ marginTop: "5rem" }}>
                 <div className='w-100 d-flex justify-content-center'> <h1 style={{ color: "#d67d9d", }}>Testimonials</h1></div>
-                <div className=' d-flex flex-row justify-content-evenly mt-5' >
+                <div className=' d-flex flex-row flex-wrap justify-content-evenly mt-5 gap-5' >
                     {
                         testmonial.map((curElm, index) => {
                             return (
-                                <div key={index} className='d-flex flex-column  align-items-center px-1' style={{ background: "#d67d9d", color: "white", width: "25rem", position: "relative" }}>
+                                <div key={index} className='d-flex flex-column align-items-center px-1 col-12 col-lg-3' style={{ background: "#d67d9d", color: "white", position: "relative" }}>
                                     <div style={{ height: "2rem", position: "absolute", top: "0" }}><h1 style={{ fontSize: "4rem", }}>“</h1></div>
                                     <p className='text-center pt-5'>{curElm.description}</p>
                                     <img src={curElm.img} alt={curElm.img} style={{ width: "5rem", }} />

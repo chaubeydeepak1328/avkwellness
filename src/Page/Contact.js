@@ -3,10 +3,10 @@ import dash_img from "../images/contact-us/dashboard.png"
 
 const Contact = () => {
   return (
-    <div>
-      <img style={{ width: "100%" }} src={dash_img} alt={dash_img} />
+    <>
+      <img className='w-100' src={dash_img} alt={dash_img} />
 
-      <div className='container d-flex gap-5' style={{ marginTop: "8rem", color: "gray" }}>
+      <div className='w-100 d-flex flex-row flex-wrap gap-5 col-12 col-lg-5 px-2 px-lg-5 ' style={{ marginTop: "4rem", color: "gray" }}>
         <div className='d-flex flex-column'>
           <h2 style={{ color: "#65A29D" }}>Get In Touch</h2>
           <h4 style={{ color: "#D67D9D" }}> Information</h4>
@@ -40,7 +40,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className='card d-flex flex-column p-5' style={{ background: "#f5f5f5", color: "gray" }}>
+        <div className='card d-flex flex-column p-3 pt-4 col-12 col-lg-5' style={{ background: "#f5f5f5", color: "gray" }}>
           <h4 style={{ color: "#D67D9D" }}>Send Us Message</h4>
           <p>Join us in advocating for wellnwss and making positive difference in lives of employees across india!</p>
           <form action="#" className='d-flex flex-column gap-3'>
@@ -54,7 +54,7 @@ const Contact = () => {
         </div>
       </div>
 
-    </div>
+    </>
   )
 }
 

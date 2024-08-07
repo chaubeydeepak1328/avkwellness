@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-font-family: "Tiro Devanagari Marathi", serif;
+  font-family: "Tiro Devanagari Marathi", serif;
 }
 
 
@@ -56,7 +56,25 @@ font-family: "Tiro Devanagari Marathi", serif;
 
 @media (max-width:769px){
   .homeDetailsBtn{
-    display: none;
+    display: none !important;
   }
+}
+
+
+@media (min-width:1400px)
+{
+  .benefit_card{
+    font-size: 72%;
+  }
+}
+
+
+/* ========================================================= */
+/*========================= About=========================== */
+/* ========================================================= */
+
+
+@media (min-width:768px){
+  /*  */
 }
 

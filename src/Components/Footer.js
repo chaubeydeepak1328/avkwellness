@@ -4,16 +4,18 @@ import logo from "../images/logo.jpeg";
 const Footer = () => {
     return (
         <div className='mt-5' style={{ background: "black", color: "white" }}>
-            <div className='container d-flex flex-row justify-content-center py-5'>
-                <img src={logo} alt={logo} style={{ width: "12rem", height: "6rem", margin: "auto" }} />
-                <div className='d-flex flex-column text-center w-25'>
+            <div className='d-flex flex-wrap justify-content-center  py-5'>
+                <div className='col-12 col-lg-3 d-flex justify-content-center align-items-center'>
+                    <img className='w-50 h-50' src={logo} alt={logo} />
+                </div>
+                <div className='d-flex flex-column text-center col-12 col-lg-3'>
                     <h2>Quick Menu</h2>
                     <p>Home</p>
                     <p>About Us</p>
                     <p>Our Programs</p>
                     <p>Our teams</p>
                 </div>
-                <div className='d-flex flex-column align-items-center text-center w-25 gap-2'>
+                <div className='d-flex flex-column align-items-center text-center col-12 col-lg-3 gap-2'>
                     <h2>Get In Touch</h2>
                     <div className='d-flex gap-1'> <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" viewBox="0 0 24 24">
                         <path fill="pink" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99" />
@@ -54,7 +56,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='d-flex flex-column text-center w-25 align-items-center'>
+                <div className='d-flex flex-column text-center align-items-center col-12 col-lg-3'>
                     <h2>Map</h2>
                     <iframe
                         title='companyLocation'
