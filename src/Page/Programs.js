@@ -56,13 +56,13 @@ const Programs = () => {
                                     </div>
                                     <h6 className='text-black'>Key Features</h6>
                                     <div>
-                                        <ol className="custom-list">
+                                        <ul>
                                             {curElm.key_features.map((feature, index) => {
                                                 return (
                                                     <li key={index}>{feature}</li>
                                                 )
                                             })}
-                                        </ol>
+                                        </ul>
 
                                     </div>
                                     <div className='d-flex justify-content-center pt-4'>

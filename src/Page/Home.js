@@ -7,19 +7,22 @@ import { Benefits_section, Progrm_section, testmonial } from '../config/Api';
 const Home = () => {
     return (
         <div >
-            <div className='w-50'>
-                <img src={dash_img} alt={dash_img} />
+            <div className='col-12'>
+                <img className='w-100' src={dash_img} alt={dash_img} />
             </div>
+
+
+
             {/* About Us */}
-            <div className='container d-flex justify-content-between pt-5' style={{ marginTop: "5rem" }}>
-                <div className='w-50'>
-                    <div className='d-flex gap-2'><hr style={{ width: "1.6rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d",  }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>ABOUT US</h2></div>
+            <div className='container d-flex flex-wrap-reverse justify-content-between pt-5' style={{ marginTop: "5rem" }}>
+                <div className='col-12 col-lg-5'>
+                    <div className='d-flex gap-2'><hr style={{ width: "1.6rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>ABOUT US</h2></div>
                     <h1 style={{ color: "#d67d9d" }}>Learn About Our wellness Advocacy Programs</h1>
                     <p>At our Wellness Advocacy Programs, we understand that a healthy employee is a happy and productive one. We are to promote a holistic approach to well-being, encompassing physical, mental, and emotional health. We provide corporate employees with the resources and support they need to thrive both personally and professionally through our advocacy programs. This initiative aims to create a healthier, more productive, and engaged workforce by providing comprehensive wellness solutions tailored to the unique needs of each organization.</p>
                     <button type="button" class="btn" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", paddingBottom: "0", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Learn More </p> <span className='fw-bold'>{'>'}</span></button>
                 </div>
-                <div>
-                    <img src={qualites_img} alt={qualites_img} />
+                <div className='col-12 col-lg-5'>
+                    <img className='w-100' src={qualites_img} alt={qualites_img} />
                 </div>
             </div>
 
@@ -30,7 +33,7 @@ const Home = () => {
                         <div className='d-flex gap-2'><hr style={{ width: "2.4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>PROGRAMS</h2></div>
                         <h1 style={{ color: "#d67d9d" }}>Wellness Advocacy Programs</h1>
                     </div>
-                    <button type="button" class="btn" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", height: "fit-content", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Details </p> <span className='fw-bold'>{'>'}</span></button>
+                    <button type="button" className="btn homeDetailsBtn" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", height: "fit-content", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Details </p> <span className='fw-bold'>{'>'}</span></button>
                 </div>
                 <div className='d-flex flex-wrap gap-5 justify-content-center'>
                     {Progrm_section.map((curElm, index) => {
