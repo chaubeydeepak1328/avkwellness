@@ -2,7 +2,64 @@ import React from 'react';
 import dash_img from "../images/Our-teams/dashboard.png"
 import { teamMembers } from '../config/Api';
 
+
+import { motion } from 'framer-motion';
+
+
 const Teams = () => {
+
+    const floatUP = {
+        initial: {
+            opacity: 0,
+            y: 100,
+        },
+        animate: (index: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                delay: 0.05 * index,
+            }
+        })
+    };
+
+
+
+    const floatRight = {
+        initial: {
+            opacity: 0,
+            x: -200,
+        },
+        animate: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: .5,
+                delay: 0.05,
+            }
+        }
+    }
+
+
+    const Grow = {
+        initial: {
+            opacity: 0,
+            scale: .5,
+            y: 100,
+        },
+        animate: {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+                duration: .5,
+                delay: 0.05
+            }
+        }
+    }
+
+
+
     return (
         <div>
             <div className='w-100' style={{ position: "relative" }}>
@@ -15,12 +72,12 @@ const Teams = () => {
                     height: "100%",
                     backgroundColor: "rgba(0, 0, 0, 0.4)"
                 }}></div>
-                <h1 className='text-white' style={{
+                <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-white' style={{
                     position: "absolute",
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%, -50%)"
-                }}>Our Teams</h1>
+                }}>Our Teams</motion.h1>
             </div>
 
             <div className='w-100' style={{ background: '#f5f5f5' }}>
@@ -28,7 +85,7 @@ const Teams = () => {
                     {teamMembers.map((curElm, index) => {
                         return (
                             <>
-                                <div key={index} class="card d-flex flex-column flex-lg-row gap-4 col-11 col-md-11" style={{ maxWidth: "60rem", position: "relative" }}>
+                                <motion.div variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} key={index} class="card d-flex flex-column flex-lg-row gap-4 col-11 col-md-11" style={{ maxWidth: "60rem", position: "relative" }}>
 
                                     <div className='col-12 col-lg-6'>
                                         <img class="card-img-top w-100" src={curElm.img} alt={curElm.img} />
@@ -37,7 +94,7 @@ const Teams = () => {
                                     <div class="card-body col-12 col-lg-6 d-flex flex-column justify-content-center">
                                         <div className='col-12 teamCardDetails'>
                                             <h5 class="card-title ">{curElm.name}</h5>
-                                            <div className='d-flex gap-2'><hr class="hr_tag" style={{ width: "8rem", height: "2px", backgroundColor: "red", }} /> <h2 className='team_desig' style={{ fontSize: "1.4rem" }}>{curElm.title}</h2></div>
+                                            <motion.div variants={floatRight} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex gap-2'><hr class="hr_tag" style={{ width: "8rem", height: "2px", backgroundColor: "red", }} /> <h2 className='team_desig' style={{ fontSize: "1.4rem" }}>{curElm.title}</h2></motion.div>
                                             <div className='d-flex gap-4 py-2'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                                     <path fill="#22222266" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z" />
@@ -57,9 +114,9 @@ const Teams = () => {
                                                 </svg>
                                             </div>
                                         </div>
-                                        <p class="card-text">{curElm.description}</p>
+                                        <motion.p variants={Grow} initial="initial" whileInView="animate" viewport={{ once: true }} class="card-text">{curElm.description}</motion.p>
                                     </div>
-                                </div>
+                                </motion.div>
 
 
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" style={{ transform: "scaleY(-1)", transformOrigin: "center", }}>

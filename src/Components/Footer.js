@@ -31,22 +31,36 @@ const Footer = () => {
             opacity: 1,
             x: 0,
             transition: {
-                duration: .5,
-                delay: 0.05,
                 duration: 1,
+                delay: 0.05,
             }
         }
     }
 
+    const floatUP = {
+        initial: {
+            opacity: 0,
+            y: 10,
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                delay: 0.05,
+            }
+        }
+    };
+
 
 
     return (
-        <div className='mt-5' style={{ background: "black", color: "white" }}>
+        <div className='mt-5' style={{ background: "black", color: "white", overflow: "hidden" }}>
             <div className='d-flex flex-wrap justify-content-center py-5 gap-2'>
-                <motion.div variants={floatLeft} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-white' className='col-8 col-lg-2 d-flex justify-content-center align-items-center'>
+                <motion.div variants={floatLeft} initial="initial" whileInView="animate" viewport={{ once: true }} className='col-8 col-lg-2 d-flex justify-content-center align-items-center'>
                     <img className='w-100' src={logo} alt={logo} />
                 </motion.div>
-                <motion.div variants={floatLeft} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-white' className='d-flex flex-column text-center col-12 col-lg-3'>
+                <motion.div variants={floatLeft} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex flex-column text-center col-12 col-lg-3'>
                     <h2>Quick Menu</h2>
                     <p>Home</p>
                     <p>About Us</p>
@@ -109,7 +123,7 @@ const Footer = () => {
                 </motion.div>
             </div>
             <hr />
-            <div className='py-2 d-flex justify-content-center text-center'><p>Copyright©2024 AVK Wellness Private Limited. All rights reserved.</p></div>
+            <div className='py-2 d-flex justify-content-center text-center' style={{ overflowY: "hidden" }}><motion.p variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} >Copyright©2024 AVK Wellness Private Limited. All rights reserved.</motion.p></div>
         </div>
     )
 }

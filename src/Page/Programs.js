@@ -24,26 +24,13 @@ const Programs = () => {
         })
     };
 
-    const floatDown = {
-        initial: {
-            opacity: 0,
-            y: -100,
-        },
-        animate: (index: number) => ({
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.5,
-                delay: 0.05 * index,
-            }
-        })
-    };
+
 
 
     const floatRight = {
         initial: {
             opacity: 0,
-            x: -200,
+            x: -100,
         },
         animate: {
             opacity: 1,
@@ -58,7 +45,7 @@ const Programs = () => {
     const floatLeft = {
         initial: {
             opacity: 0,
-            x: 200,
+            x: 100,
         },
         animate: {
             opacity: 1,
@@ -192,7 +179,7 @@ const Programs = () => {
 
 
 
-            <div className='px-2 px-lg-5 d-flex flex-wrap gap-5 justify-content-center'>
+            <div className='px-2 px-lg-5 d-flex flex-wrap gap-5 justify-content-center' style={{ overflow: "hidden" }}>
                 <div className='col-11 col-lg-5'>
                     <motion.div variants={floatRight} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex gap-2'><hr style={{ width: "5rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h6 style={{ fontSize: "1.4rem", color: "#65a29d" }}>HELP</h6></motion.div>
                     <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ color: "#d67d9d" }}>Join the Wellness Advocacy Program</motion.h1>

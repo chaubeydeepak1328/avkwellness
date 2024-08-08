@@ -25,20 +25,6 @@ const Home = () => {
         })
     };
 
-    const floatDown = {
-        initial: {
-            opacity: 0,
-            y: -100,
-        },
-        animate: (index: number) => ({
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.5,
-                delay: 0.05 * index,
-            }
-        })
-    };
 
 
     const floatRight = {
@@ -145,7 +131,7 @@ const Home = () => {
 
 
             {/* Benefits */}
-            <div className='row d-flex justify-content-center' style={{ position: "relative" }}>
+            <div className='row w-100 d-flex justify-content-center' style={{ position: "relative" }}>
                 <div class="parallax w-100"></div>
                 <div style={{
                     position: "absolute",

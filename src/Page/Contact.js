@@ -1,25 +1,44 @@
 import React from 'react';
 import dash_img from "../images/contact-us/dashboard.png"
 
+import { motion } from 'framer-motion';
+
 const Contact = () => {
+
+  const floatUP = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        delay: 0.05,
+      }
+    }
+  };
+
+
   return (
     <>
       <img className='w-100' src={dash_img} alt={dash_img} />
 
       <div className='w-100 d-flex flex-row flex-wrap gap-5 col-12 col-lg-5 px-2 px-lg-5 justify-content-center ' style={{ marginTop: "4rem", color: "gray" }}>
         <div className='d-flex flex-column col-12 col-md-10 col-lg-6'>
-          <h2 style={{ color: "#65A29D" }}>Get In Touch</h2>
-          <h4 style={{ color: "#D67D9D" }}> Information</h4>
-          <p>For more information about the Wellness Advocacy Programme and how to get started, please contact us at:</p>
+          <motion.h2 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ color: "#65A29D", overflowY: "hidden" }}>Get In Touch</motion.h2>
+          <motion.h4 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ color: "#D67D9D" }}> Information</motion.h4>
+          <motion.p variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }}>For more information about the Wellness Advocacy Programme and how to get started, please contact us at:</motion.p>
           <p>    <b>Landline</b>: +91-11- 46039314</p>
           <p><b>Email</b>: info@avkwellness.com</p>
           <p><b>Website</b>: www.avkwellness.com</p>
           <p><b>Address</b>: A-3/11, Shop No-01, Trehan Complex, Janakpuri , New Delhi- 110058</p>
-          <p> <b>AVK WELLNESS PRIVATE LIMITED</b></p>
+          <motion.p variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }}> <b>AVK WELLNESS PRIVATE LIMITED</b></motion.p>
           <p><b>CIN</b>:   U55101DL2024PTC427842</p>
           <p> <b>PAN</b>:  ABACA2928H</p>
           <p><b>TAN</b>:  DELA76303Ds</p>
-          <div className='d-flex gap-2'><hr style={{ width: "1.6rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#d67d9d" }}> Follow Us</h2></div>
+          <motion.div variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex gap-2'><hr style={{ width: "1.6rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#d67d9d" }}> Follow Us</h2></motion.div>
           <div className='d-flex gap-4 py-2'>
             <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24">
               <path fill="#22222266" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z" />
@@ -40,7 +59,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className='card d-flex flex-column p-3 pt-4 col-12 col-lg-5' style={{ background: "#f5f5f5", color: "gray", maxWidth: "30rem" }}>
+        <motion.div variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} className='card d-flex flex-column p-3 pt-4 col-12 col-lg-5' style={{ background: "#f5f5f5", color: "gray", maxWidth: "30rem" }}>
           <h4 style={{ color: "#D67D9D" }}>Send Us Message</h4>
           <p>Join us in advocating for wellnwss and making positive difference in lives of employees across india!</p>
           <form action="#" className='d-flex flex-column gap-3'>
@@ -51,7 +70,7 @@ const Contact = () => {
               <button type="button" class="btn" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", paddingBottom: "0", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Send Message </p> <span className='fw-bold'>{'>'}</span></button>
             </div>
           </form>
-        </div>
+        </motion.div>
       </div>
 
     </>
