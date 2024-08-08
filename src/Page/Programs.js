@@ -3,7 +3,92 @@ import dash_img from "../images/programs/dashboard.png"
 import { keyComp, ProgramTypes } from '../config/Api';
 import yoga from "../images/programs/yoga.jpg";
 
+
+import { motion } from 'framer-motion';
+
 const Programs = () => {
+
+
+    const floatUP = {
+        initial: {
+            opacity: 0,
+            y: 100,
+        },
+        animate: (index: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                delay: 0.05 * index,
+            }
+        })
+    };
+
+    const floatDown = {
+        initial: {
+            opacity: 0,
+            y: -100,
+        },
+        animate: (index: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                delay: 0.05 * index,
+            }
+        })
+    };
+
+
+    const floatRight = {
+        initial: {
+            opacity: 0,
+            x: -200,
+        },
+        animate: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: .5,
+                delay: 0.05,
+            }
+        }
+    }
+
+    const floatLeft = {
+        initial: {
+            opacity: 0,
+            x: 200,
+        },
+        animate: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: .5,
+                delay: 0.05
+            }
+        }
+    }
+
+    const Grow = {
+        initial: {
+            opacity: 0,
+            scale: .6,
+            y: 100,
+        },
+        animate: {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            transition: {
+                duration: .5,
+                delay: 0.05
+            }
+        }
+    }
+
+
+
     return (
         <>
             <div>
@@ -17,17 +102,17 @@ const Programs = () => {
                         height: "100%",
                         backgroundColor: "rgba(0, 0, 0, 0.4)"
                     }}></div>
-                    <h1 className='text-white' style={{
+                    <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-white' style={{
                         position: "absolute",
                         top: "50%",
                         left: "50%",
                         transform: "translate(-50%, -50%)"
-                    }}>Program</h1>
+                    }}>Program</motion.h1>
                 </div>
 
 
                 <div className='container mt-5'>
-                    <h1 style={{ color: "#65A29D" }}>Welcome to Our Corporate Leaders Wellness Program</h1>
+                    <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ color: "#65A29D" }}>Welcome to Our Corporate Leaders Wellness Program</motion.h1>
                     <p style={{ color: "#D67D9D", fontSize: "1.2rem" }}>Introduction</p>
                     <p>As a corporate leader, your well-being is crucial not only for your own success but also for the success of your organization. Our Wellness Advocacy Program is designed to support you in managing stress, enhancing your mental and physical health, and fostering a balanced lifestyle.
                         Our Wellness Advocacy Programs aimed at Corporate Leaders should focus on specific areas that resonate with their responsibilities, stress levels, and the high-pressure environment they navigate.</p>
@@ -36,17 +121,17 @@ const Programs = () => {
                 </div>
 
                 <div className='container mt-5'>
-                    <h1 className='text-center' style={{ color: "#65A29D" }}>Wellness Advocacy Programs</h1>
-                    <h4 className='text-center' style={{ color: "#D67D9D", fontWeight: "600" }}>Overview</h4>
+                    <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-center' style={{ color: "#65A29D" }}>Wellness Advocacy Programs</motion.h1>
+                    <motion.h4 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-center' style={{ color: "#D67D9D", fontWeight: "600" }}>Overview</motion.h4>
                     <p>Our Wellness Advocacy Programs are meticulously crafted to cater to the unique needs of corporate leaders and employees in India. These programs aim to foster a holistic approach to well-being, ensuring that leaders and their team are not only at their peak performance but also embody wellness practices that inspire their teams.</p>
                 </div>
 
                 <div className='container mt-5'>
-                    <h2 className='text-center' style={{ color: "#D67D9D", }}>Program Types</h2>
+                    <motion.h2 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-center' style={{ color: "#D67D9D", }}>Program Types</motion.h2>
                     <div className='d-flex flex-wrap gap-5 justify-content-center' style={{ marginTop: "5rem" }}>
                         {ProgramTypes.map((curElm, index) => {
                             return (
-                                <div className="card col-12 col-lg-5 p-5" style={{ background: "#D67D9D", color: "white" }} key={index}>
+                                <motion.div variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} custom={index} className="card col-12 col-lg-5 p-5" style={{ background: "#D67D9D", color: "white" }} key={index}>
 
                                     <img className='card-img-top' src={curElm.img} alt={curElm.img} />
 
@@ -68,7 +153,7 @@ const Programs = () => {
                                     <div className='d-flex justify-content-center pt-4'>
                                         <button type="button" class="btn" style={{ background: "#65A29D", color: "white", display: "flex", flexDirection: "row", gap: ".6rem", alignItems: "center" }}> <p className='p-0 m-1' >contact Us </p> <span className='fw-bold'>{'>'}</span></button>
                                     </div>
-                                </div>
+                                </motion.div>
                             )
                         })}
                     </div>
@@ -77,11 +162,11 @@ const Programs = () => {
 
             <div style={{ background: "#f5f5f5" }}>
                 <div className='container d-flex flex-column ' style={{ marginTop: "5rem", paddingTop: "5rem" }}>
-                    <h2 className='text-center mb-5' style={{ color: "#65A29D" }}>Key Components</h2>
+                    <motion.h2 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-center mb-5' style={{ color: "#65A29D" }}>Key Components</motion.h2>
                     <div className='d-flex flex-wrap gap-5 justify-content-lg-aroud justify-content-center'>
                         {keyComp.map((curElm, index) => {
                             return (
-                                <div className='card col-12 col-lg-3' key={index}>
+                                <motion.div variants={Grow} initial="initial" whileInView="animate" viewport={{ once: true }} custom={index} className='card col-12 col-lg-3' key={index}>
                                     <img className='card-img-top' src={curElm.img} alt={curElm.img} />
                                     <div className='card-body'>
                                         <h3 className='card-title text-center' style={{ color: "#65A29D" }}>{curElm.title}</h3>
@@ -93,7 +178,7 @@ const Programs = () => {
                                             })}
                                         </ol>
                                     </div>
-                                </div>
+                                </motion.div>
                             );
                         })}
                     </div>
@@ -109,16 +194,16 @@ const Programs = () => {
 
             <div className='px-2 px-lg-5 d-flex flex-wrap gap-5 justify-content-center'>
                 <div className='col-11 col-lg-5'>
-                    <div className='d-flex gap-2'><hr style={{ width: "5rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h6 style={{ fontSize: "1.4rem", color: "#65a29d" }}>HELP</h6></div>
-                    <h1 style={{ color: "#d67d9d" }}>Join the Wellness Advocacy Program</h1>
-                    <p>We invite all corporate and government organizations to join us in this transformative journey towards better health and well-being. Together, we can create a healthier, happier, and more productive workforce for a brighter future</p>
+                    <motion.div variants={floatRight} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex gap-2'><hr style={{ width: "5rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h6 style={{ fontSize: "1.4rem", color: "#65a29d" }}>HELP</h6></motion.div>
+                    <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ color: "#d67d9d" }}>Join the Wellness Advocacy Program</motion.h1>
+                    <motion.p variants={Grow} initial="initial" whileInView="animate" viewport={{ once: true }}>We invite all corporate and government organizations to join us in this transformative journey towards better health and well-being. Together, we can create a healthier, happier, and more productive workforce for a brighter future</motion.p>
                     <div className='d-flex justify-content-center'>
                         <button type="button" class="btn " style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", paddingBottom: "0", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Contact Us</p> <span className='fw-bold'>{'>'}</span></button>
                     </div>
                 </div>
-                <div className='col-11 col-lg-5'>
+                <motion.div variants={floatLeft} initial="initial" whileInView="animate" viewport={{ once: true }} className='col-11 col-lg-5'>
                     <img className='w-100' src={yoga} alt={yoga} />
-                </div>
+                </motion.div>
             </div>
 
         </>

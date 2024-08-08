@@ -1,21 +1,59 @@
 import React from 'react';
 import logo from "../images/logo.jpeg";
+import { motion } from 'framer-motion';
 
 const Footer = () => {
+
+
+
+
+    const floatRight = {
+        initial: {
+            opacity: 0,
+            x: -200,
+        },
+        animate: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                delay: 0.05,
+                duration: 1,
+            }
+        }
+    }
+
+    const floatLeft = {
+        initial: {
+            opacity: 0,
+            x: 200,
+        },
+        animate: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: .5,
+                delay: 0.05,
+                duration: 1,
+            }
+        }
+    }
+
+
+
     return (
         <div className='mt-5' style={{ background: "black", color: "white" }}>
             <div className='d-flex flex-wrap justify-content-center py-5 gap-2'>
-                <div className='col-8 col-lg-2 d-flex justify-content-center align-items-center'>
+                <motion.div variants={floatLeft} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-white' className='col-8 col-lg-2 d-flex justify-content-center align-items-center'>
                     <img className='w-100' src={logo} alt={logo} />
-                </div>
-                <div className='d-flex flex-column text-center col-12 col-lg-3'>
+                </motion.div>
+                <motion.div variants={floatLeft} initial="initial" whileInView="animate" viewport={{ once: true }} className='text-white' className='d-flex flex-column text-center col-12 col-lg-3'>
                     <h2>Quick Menu</h2>
                     <p>Home</p>
                     <p>About Us</p>
                     <p>Our Programs</p>
                     <p>Our teams</p>
-                </div>
-                <div className='d-flex flex-column align-items-center text-center col-12 col-lg-3 gap-2'>
+                </motion.div>
+                <motion.div variants={floatRight} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex flex-column align-items-center text-center col-12 col-lg-3 gap-2'>
                     <h2>Get In Touch</h2>
                     <div className='d-flex gap-1'> <svg xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" viewBox="0 0 24 24">
                         <path fill="pink" d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99" />
@@ -55,20 +93,20 @@ const Footer = () => {
                             </svg>
                         </div>
                     </div>
-                </div>
-                <div className='d-flex flex-column text-center align-items-center col-12 col-lg-3'>
+                </motion.div>
+                <motion.div variants={floatRight} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex flex-column text-center align-items-center col-12 col-lg-3'>
                     <h2>Map</h2>
                     <iframe
                         title='companyLocation'
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.010837080505!2d77.0605958871582!3d28.62968089999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04bf7f6ae361%3A0x88c15da012435142!2sWestend%20Mall%20Janakpuri%20West%20Delhi!5e0!3m2!1sen!2sin!4v1722917749577!5m2!1sen!2sin"
-                        
+
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
 
-                </div>
+                </motion.div>
             </div>
             <hr />
             <div className='py-2 d-flex justify-content-center text-center'><p>Copyright©2024 AVK Wellness Private Limited. All rights reserved.</p></div>

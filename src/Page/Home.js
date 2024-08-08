@@ -4,7 +4,92 @@ import qualites_img from "../images/qualites.jpg";
 
 import { Benefits_section, Progrm_section, testmonial } from '../config/Api';
 
+
+import { motion } from 'framer-motion';
+
 const Home = () => {
+
+
+    const floatUP = {
+        initial: {
+            opacity: 0,
+            y: 100,
+        },
+        animate: (index: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                delay: 0.05 * index,
+            }
+        })
+    };
+
+    const floatDown = {
+        initial: {
+            opacity: 0,
+            y: -100,
+        },
+        animate: (index: number) => ({
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                delay: 0.05 * index,
+            }
+        })
+    };
+
+
+    const floatRight = {
+        initial: {
+            opacity: 0,
+            x: -200,
+        },
+        animate: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: .5,
+                delay: 0.05,
+            }
+        }
+    }
+
+    const floatLeft = {
+        initial: {
+            opacity: 0,
+            x: 200,
+        },
+        animate: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: .5,
+                delay: 0.05
+            }
+        }
+    }
+
+    const Grow = {
+        initial: {
+            opacity: 0,
+            scale: .6,
+        },
+        animate: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: .5,
+                delay: 0.05
+            }
+        }
+    }
+
+
+
+
+
     return (
         <>
             <div className='w-100'>
@@ -16,29 +101,29 @@ const Home = () => {
             {/* About Us */}
             <div className='container d-flex flex-wrap-reverse justify-content-between pt-5 w-100' style={{ marginTop: "5rem" }}>
                 <div className='col-12 col-lg-5'>
-                    <div className='d-flex gap-2'><hr style={{ width: "1.6rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>ABOUT US</h2></div>
-                    <h1 style={{ color: "#d67d9d" }}>Learn About Our wellness Advocacy Programs</h1>
-                    <p>At our Wellness Advocacy Programs, we understand that a healthy employee is a happy and productive one. We are to promote a holistic approach to well-being, encompassing physical, mental, and emotional health. We provide corporate employees with the resources and support they need to thrive both personally and professionally through our advocacy programs. This initiative aims to create a healthier, more productive, and engaged workforce by providing comprehensive wellness solutions tailored to the unique needs of each organization.</p>
+                    <motion.div variants={floatRight} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex gap-2'><hr style={{ width: "1.6rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>ABOUT US</h2></motion.div>
+                    <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ color: "#d67d9d" }}>Learn About Our wellness Advocacy Programs</motion.h1>
+                    <motion.p variants={Grow} initial="initial" whileInView="animate" viewport={{ once: true }}>At our Wellness Advocacy Programs, we understand that a healthy employee is a happy and productive one. We are to promote a holistic approach to well-being, encompassing physical, mental, and emotional health. We provide corporate employees with the resources and support they need to thrive both personally and professionally through our advocacy programs. This initiative aims to create a healthier, more productive, and engaged workforce by providing comprehensive wellness solutions tailored to the unique needs of each organization.</motion.p>
                     <button type="button" class="btn" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", paddingBottom: "0", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Learn More </p> <span className='fw-bold'>{'>'}</span></button>
                 </div>
-                <div className='col-12 col-lg-5'>
+                <motion.div variants={floatLeft} initial="initial" whileInView="animate" viewport={{ once: true }} className='col-12 col-lg-5'>
                     <img className='w-100' src={qualites_img} alt={qualites_img} />
-                </div>
+                </motion.div>
             </div>
 
             {/* Program */}
             <div className='px-4 w-100' style={{ marginTop: '5rem' }}>
                 <div className='d-flex flex-row justify-content-between px-lg-5 mx-lg-5'>
                     <div className='ps-lg-5'>
-                        <div className='d-flex gap-2'><hr style={{ width: "2.4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>PROGRAMS</h2></div>
-                        <h1 style={{ color: "#d67d9d" }}>Wellness Advocacy Programs</h1>
+                        <motion.div variants={floatRight} initial="initial" whileInView="animate" viewport={{ once: true }} className='d-flex gap-2'><hr style={{ width: "2.4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>PROGRAMS</h2></motion.div>
+                        <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ color: "#d67d9d" }}>Wellness Advocacy Programs</motion.h1>
                     </div>
                     <button type="button" className="btn homeDetailsBtn me-lg-5" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", height: "fit-content", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Details </p> <span className='fw-bold'>{'>'}</span></button>
                 </div>
                 <div className='d-flex flex-wrap gap-5 justify-content-center'>
                     {Progrm_section.map((curElm, index) => {
                         return (
-                            <div key={index} class="card col-12 col-lg-3">
+                            <motion.div variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} custom={index} key={index} class="card col-12 col-lg-3">
                                 <img class="card-img-top" src={curElm.img} alt={curElm.img} />
                                 <div class="card-body">
                                     <h5 class="card-title">{curElm.title}</h5>
@@ -47,7 +132,7 @@ const Home = () => {
                                 <div className='d-flex justify-content-center pb-4'>
                                     <button type="button" class="btn" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", paddingBottom: "0", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Learn More </p> <span className='fw-bold'>{'>'}</span></button>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })}
                 </div>
@@ -74,14 +159,14 @@ const Home = () => {
                     <div>
                         <div className='d-flex gap-2'>
                             <hr style={{ width: "3rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d" }} />
-                            <h2 style={{ fontSize: "1.4rem", color: "#65a29d", fontWeight: "600" }}>BENEFITS</h2>
+                            <motion.h2 variants={floatRight} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ fontSize: "1.4rem", color: "#65a29d", fontWeight: "600" }}>BENEFITS</motion.h2>
                         </div>
                         <h3 className='w-100 text-white' style={{ zIndex: 100 }}>Benefits of the Program</h3>
                     </div>
                 </div>
                 <div className='d-flex flex-wrap gap-5 justify-content-center' style={{ transform: "translateY(-10rem)" }}>
                     {Benefits_section.map((curElm, index) => (
-                        <div key={index} className='card benefit_card d-flex flex-lg-row col-11 col-xl-4'>
+                        <motion.div variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} key={index} className='card benefit_card d-flex flex-lg-row col-11 col-xl-4'>
                             <div className='col-12 col-lg-5'>
                                 <img className='card-img-top' src={curElm.img} alt={curElm.img} />
                             </div>
@@ -89,7 +174,7 @@ const Home = () => {
                                 <h5 style={{ color: '#d67d9d' }} className='card-title'>{curElm.title}</h5>
                                 <p style={{ color: 'gray' }} className='card-text'>{curElm.description}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
@@ -99,7 +184,7 @@ const Home = () => {
             {/* Testmonial */}
             <div div className='mt-5 px-5' style={{ marginTop: "5rem" }
             }>
-                <div className='w-100 d-flex justify-content-center'> <h1 style={{ color: "#d67d9d", }}>Testimonials</h1></div>
+                <div className='w-100 d-flex justify-content-center'> <motion.h1 variants={floatUP} initial="initial" whileInView="animate" viewport={{ once: true }} style={{ color: "#d67d9d", }}>Testimonials</motion.h1></div>
                 <div className=' d-flex flex-row flex-wrap justify-content-evenly mt-5 gap-5' >
                     {
                         testmonial.map((curElm, index) => {
@@ -120,7 +205,7 @@ const Home = () => {
                         })
                     }
                 </div>
-            </div >
+            </div>
         </>
     )
 }
