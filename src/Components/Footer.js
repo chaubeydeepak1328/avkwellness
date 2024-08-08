@@ -4,9 +4,9 @@ import logo from "../images/logo.jpeg";
 const Footer = () => {
     return (
         <div className='mt-5' style={{ background: "black", color: "white" }}>
-            <div className='d-flex flex-wrap justify-content-center  py-5'>
-                <div className='col-12 col-lg-3 d-flex justify-content-center align-items-center'>
-                    <img className='w-50 h-50' src={logo} alt={logo} />
+            <div className='d-flex flex-wrap justify-content-center py-5 gap-2'>
+                <div className='col-8 col-lg-2 d-flex justify-content-center align-items-center'>
+                    <img className='w-100' src={logo} alt={logo} />
                 </div>
                 <div className='d-flex flex-column text-center col-12 col-lg-3'>
                     <h2>Quick Menu</h2>
@@ -61,8 +61,7 @@ const Footer = () => {
                     <iframe
                         title='companyLocation'
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14008.010837080505!2d77.0605958871582!3d28.62968089999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d04bf7f6ae361%3A0x88c15da012435142!2sWestend%20Mall%20Janakpuri%20West%20Delhi!5e0!3m2!1sen!2sin!4v1722917749577!5m2!1sen!2sin"
-                        width="200"
-                        height="200"
+                        
                         style={{ border: 0 }}
                         allowFullScreen
                         loading="lazy"

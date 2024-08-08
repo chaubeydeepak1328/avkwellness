@@ -29,11 +29,11 @@ const Home = () => {
             {/* Program */}
             <div className='px-4 w-100' style={{ marginTop: '5rem' }}>
                 <div className='d-flex flex-row justify-content-between px-lg-5 mx-lg-5'>
-                    <div>
+                    <div className='ps-lg-5'>
                         <div className='d-flex gap-2'><hr style={{ width: "2.4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>PROGRAMS</h2></div>
                         <h1 style={{ color: "#d67d9d" }}>Wellness Advocacy Programs</h1>
                     </div>
-                    <button type="button" className="btn homeDetailsBtn" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", height: "fit-content", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Details </p> <span className='fw-bold'>{'>'}</span></button>
+                    <button type="button" className="btn homeDetailsBtn me-lg-5" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", height: "fit-content", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Details </p> <span className='fw-bold'>{'>'}</span></button>
                 </div>
                 <div className='d-flex flex-wrap gap-5 justify-content-center'>
                     {Progrm_section.map((curElm, index) => {
@@ -51,32 +51,43 @@ const Home = () => {
                         )
                     })}
                 </div>
-                <div className='d-flex justify-content-center'>
+                <div className='d-flex justify-content-center pb-5'>
                     <button type="button" class="btn mt-4" style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", paddingBottom: "0", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >View Services </p> <span className='fw-bold'>{'>'}</span></button>
                 </div>
             </div>
 
 
+
+
             {/* Benefits */}
-            <div className='row d-flex justify-content-center w-100' style={{ marginTop: "10rem" }}>
-                <div className='d-flex flex-row justify-content-between col-12 px-lg-5 mx-lg-5 px-5'>
-                    <div className='px-lg-5 mx-lg-5'>
+            <div className='row d-flex justify-content-center' style={{ position: "relative" }}>
+                <div class="parallax w-100"></div>
+                <div style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    minHeight: "350px",
+                    backgroundColor: "rgba(0, 0, 0, 0.4)"
+                }}></div>
+                <div className='d-flex flex-row justify-content-between col-12 col-lg-9  px-lg-5 mx-lg-5 px-5 pt-5 mt-5' style={{ position: "absolute" }} >
+                    <div>
                         <div className='d-flex gap-2'>
-                            <hr style={{ width: "4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d" }} />
-                            <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>BENEFITS</h2>
+                            <hr style={{ width: "3rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d" }} />
+                            <h2 style={{ fontSize: "1.4rem", color: "#65a29d", fontWeight: "600" }}>BENEFITS</h2>
                         </div>
-                        <h1>Benefits of the Program</h1>
+                        <h3 className='w-100 text-white' style={{ zIndex: 100 }}>Benefits of the Program</h3>
                     </div>
                 </div>
-                <div className='d-flex flex-wrap gap-5 justify-content-center'>
+                <div className='d-flex flex-wrap gap-5 justify-content-center' style={{ transform: "translateY(-10rem)" }}>
                     {Benefits_section.map((curElm, index) => (
-                        <div key={index} className='card benefit_card d-flex  flex-lg-row col-11 col-lg-5 col-xxl-3'>
+                        <div key={index} className='card benefit_card d-flex flex-lg-row col-11 col-xl-4'>
                             <div className='col-12 col-lg-5'>
                                 <img className='card-img-top' src={curElm.img} alt={curElm.img} />
                             </div>
                             <div className='card-body w-100'>
-                                <h5 className='card-title'>{curElm.title}</h5>
-                                <p className='card-text'>{curElm.description}</p>
+                                <h5 style={{ color: '#d67d9d' }} className='card-title'>{curElm.title}</h5>
+                                <p style={{ color: 'gray' }} className='card-text'>{curElm.description}</p>
                             </div>
                         </div>
                     ))}
@@ -86,7 +97,8 @@ const Home = () => {
 
 
             {/* Testmonial */}
-            <div className='mt-5 px-5' style={{ marginTop: "5rem" }}>
+            <div div className='mt-5 px-5' style={{ marginTop: "5rem" }
+            }>
                 <div className='w-100 d-flex justify-content-center'> <h1 style={{ color: "#d67d9d", }}>Testimonials</h1></div>
                 <div className=' d-flex flex-row flex-wrap justify-content-evenly mt-5 gap-5' >
                     {
@@ -108,7 +120,7 @@ const Home = () => {
                         })
                     }
                 </div>
-            </div>
+            </div >
         </>
     )
 }

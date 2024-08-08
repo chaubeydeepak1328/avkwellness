@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Tiro Devanagari Marathi", serif;
 }
-
-
 
 /* ========================================================= */
 /*========================= Navbar=========================== */
@@ -29,73 +27,95 @@
   color: black;
 }
 
-@media (max-width:1025px){
+@media (min-width: 1025px) {
   /* navbar */
-  .nav_laptop{
-    display: none;
-  }
-}
-
-@media (min-width:1025px) {
-  /* navbar */
-  .nav_laptop{
+  .nav_laptop {
     display: block;
   }
-  .navTablet{
+  .navTablet {
+    display: none;
+  }
+  .nav_Phone {
+    display: none;
+  }
+}
+@media (max-width: 1025px) {
+  /* navbar */
+  .nav_laptop {
+    display: none;
+  }
+  .nav_Phone {
     display: none;
   }
 }
 
-
-
-
+@media (max-width: 769px) {
+  .navTablet {
+    display: none;
+  }
+  .nav_Phone {
+    display: block;
+  }
+}
 
 /* ========================================================= */
 /*========================= Home=========================== */
 /* ========================================================= */
 
-@media (max-width:769px){
-  .homeDetailsBtn{
+@media (max-width: 769px) {
+  .homeDetailsBtn {
     display: none !important;
   }
 }
 
-
-@media (min-width:1400px)
-{
-  .benefit_card{
-    font-size: 72%;
-  }
+@media (min-width: 1400px) {
+  /*  */
 }
 
+.parallax {
+  /* The image used */
+  background-image: url("./images/background.png");
+
+  /* Set a specific height */
+  min-height: 350px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* ========================================================= */
 /*========================= About=========================== */
 /* ========================================================= */
 
-
-@media (min-width:768px){
+@media (min-width: 768px) {
   /*  */
 }
-
-
-
 
 /* ========================================================= */
 /*========================= Program=========================== */
 /* ========================================================= */
 
-
-
-
 /* ========================================================= */
 /*========================= services=========================== */
 /* ========================================================= */
 
+@media (max-width: 992px) {
+  .teamCardDetails {
+    margin: .5rem  0 1rem 0;
+    border: 1px solid gray;
+      padding: 10px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
-@media (max-width:992px){
-  .teamCardDetails{
-    border:1px solid black;
-    font-size:1rem;
+  .team_desig{
+    font-size:1.2rem !important ;
+  }
+
+  .hr_tag{
+    width: 3rem !important;
   }
 }

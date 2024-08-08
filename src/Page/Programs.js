@@ -22,7 +22,7 @@ const Programs = () => {
                         top: "50%",
                         left: "50%",
                         transform: "translate(-50%, -50%)"
-                    }}>About US</h1>
+                    }}>Program</h1>
                 </div>
 
 
@@ -108,7 +108,7 @@ const Programs = () => {
 
 
             <div className='px-2 px-lg-5 d-flex flex-wrap gap-5 justify-content-center'>
-                <div className='col-12 col-lg-5'>
+                <div className='col-11 col-lg-5'>
                     <div className='d-flex gap-2'><hr style={{ width: "5rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h6 style={{ fontSize: "1.4rem", color: "#65a29d" }}>HELP</h6></div>
                     <h1 style={{ color: "#d67d9d" }}>Join the Wellness Advocacy Program</h1>
                     <p>We invite all corporate and government organizations to join us in this transformative journey towards better health and well-being. Together, we can create a healthier, happier, and more productive workforce for a brighter future</p>
@@ -116,7 +116,7 @@ const Programs = () => {
                         <button type="button" class="btn " style={{ background: "#d67d9d", color: "white", display: "flex", flexDirection: "row", paddingBottom: "0", gap: "1rem", alignItems: "center" }}> <p className='p-0 m-1' >Contact Us</p> <span className='fw-bold'>{'>'}</span></button>
                     </div>
                 </div>
-                <div className='col-12 col-lg-5'>
+                <div className='col-11 col-lg-5'>
                     <img className='w-100' src={yoga} alt={yoga} />
                 </div>
             </div>

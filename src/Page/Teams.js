@@ -28,16 +28,16 @@ const Teams = () => {
                     {teamMembers.map((curElm, index) => {
                         return (
                             <>
-                                <div key={index} class="card d-flex flex-column flex-lg-row gap-4 col-11 col-md-11" style={{ maxWidth: "60rem", }}>
+                                <div key={index} class="card d-flex flex-column flex-lg-row gap-4 col-11 col-md-11" style={{ maxWidth: "60rem", position: "relative" }}>
 
                                     <div className='col-12 col-lg-6'>
                                         <img class="card-img-top w-100" src={curElm.img} alt={curElm.img} />
                                     </div>
 
-                                    <div class="card-body cpl-12 col-lg-6 d-flex flex-column justify-content-center">
+                                    <div class="card-body col-12 col-lg-6 d-flex flex-column justify-content-center">
                                         <div className='col-12 teamCardDetails'>
-                                            <h5 class="card-title">{curElm.name}</h5>
-                                            <div className='d-flex gap-2'><hr style={{ width: "8rem", height: "2px", backgroundColor: "red", }} /> <h2 style={{ fontSize: "1.4rem" }}>{curElm.title}</h2></div>
+                                            <h5 class="card-title ">{curElm.name}</h5>
+                                            <div className='d-flex gap-2'><hr class="hr_tag" style={{ width: "8rem", height: "2px", backgroundColor: "red", }} /> <h2 className='team_desig' style={{ fontSize: "1.4rem" }}>{curElm.title}</h2></div>
                                             <div className='d-flex gap-4 py-2'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                                     <path fill="#22222266" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4z" />
@@ -60,11 +60,15 @@ const Teams = () => {
                                         <p class="card-text">{curElm.description}</p>
                                     </div>
                                 </div>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" style={{ transform: "scaleY(-1)", transformOrigin: "center" }}>
+
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" style={{ transform: "scaleY(-1)", transformOrigin: "center", }}>
                                     <path className="elementor-shape-fill" fill="white" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
         c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
         c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
                                 </svg>
+
+
                             </>
                         )
                     })}
