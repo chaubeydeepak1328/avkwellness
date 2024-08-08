@@ -6,15 +6,15 @@ import { Benefits_section, Progrm_section, testmonial } from '../config/Api';
 
 const Home = () => {
     return (
-        <div >
-            <div className='col-12'>
+        <>
+            <div className='w-100'>
                 <img className='w-100' src={dash_img} alt={dash_img} />
             </div>
 
 
 
             {/* About Us */}
-            <div className='container d-flex flex-wrap-reverse justify-content-between pt-5' style={{ marginTop: "5rem" }}>
+            <div className='container d-flex flex-wrap-reverse justify-content-between pt-5 w-100' style={{ marginTop: "5rem" }}>
                 <div className='col-12 col-lg-5'>
                     <div className='d-flex gap-2'><hr style={{ width: "1.6rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>ABOUT US</h2></div>
                     <h1 style={{ color: "#d67d9d" }}>Learn About Our wellness Advocacy Programs</h1>
@@ -27,7 +27,7 @@ const Home = () => {
             </div>
 
             {/* Program */}
-            <div className='px-4' style={{ marginTop: '5rem' }}>
+            <div className='px-4 w-100' style={{ marginTop: '5rem' }}>
                 <div className='d-flex flex-row justify-content-between px-lg-5 mx-lg-5'>
                     <div>
                         <div className='d-flex gap-2'><hr style={{ width: "2.4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>PROGRAMS</h2></div>
@@ -58,9 +58,9 @@ const Home = () => {
 
 
             {/* Benefits */}
-            <div className='row d-flex justify-content-center' style={{ marginTop: "10rem" }}>
+            <div className='row d-flex justify-content-center w-100' style={{ marginTop: "10rem" }}>
                 <div className='d-flex flex-row justify-content-between col-12 px-lg-5 mx-lg-5 px-5'>
-                    <div>
+                    <div className='px-lg-5 mx-lg-5'>
                         <div className='d-flex gap-2'>
                             <hr style={{ width: "4rem", height: "2px", color: "#d67d9d", backgroundColor: "#d67d9d" }} />
                             <h2 style={{ fontSize: "1.4rem", color: "#65a29d" }}>BENEFITS</h2>
@@ -109,7 +109,7 @@ const Home = () => {
                     }
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

@@ -78,7 +78,7 @@ const Programs = () => {
             <div style={{ background: "#f5f5f5" }}>
                 <div className='container d-flex flex-column ' style={{ marginTop: "5rem", paddingTop: "5rem" }}>
                     <h2 className='text-center mb-5' style={{ color: "#65A29D" }}>Key Components</h2>
-                    <div className='d-flex flex-wrap gap-5' style={{ margin: "auto" }}>
+                    <div className='d-flex flex-wrap gap-5 justify-content-lg-aroud justify-content-center'>
                         {keyComp.map((curElm, index) => {
                             return (
                                 <div className='card col-12 col-lg-3' key={index}>
@@ -107,7 +107,7 @@ const Programs = () => {
 
 
 
-            <div className='row px-2 px-lg-5 d-flex gap-5 justify-content-center'>
+            <div className='px-2 px-lg-5 d-flex flex-wrap gap-5 justify-content-center'>
                 <div className='col-12 col-lg-5'>
                     <div className='d-flex gap-2'><hr style={{ width: "5rem", height: "3px", color: "#d67d9d", backgroundColor: "#d67d9d", }} /> <h6 style={{ fontSize: "1.4rem", color: "#65a29d" }}>HELP</h6></div>
                     <h1 style={{ color: "#d67d9d" }}>Join the Wellness Advocacy Program</h1>

@@ -72,7 +72,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <div className='py-2 d-flex justify-content-center'><p>Copyright©2024 AVK Wellness Private Limited. All rights reserved.</p></div>
+            <div className='py-2 d-flex justify-content-center text-center'><p>Copyright©2024 AVK Wellness Private Limited. All rights reserved.</p></div>
         </div>
     )
 }

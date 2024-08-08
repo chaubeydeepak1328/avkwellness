@@ -5,13 +5,13 @@ import { services } from '../config/Api';
 const Services = () => {
   return (
     <div>
-      <img style={{ width: "100%" }} src={dash_img} alt={dash_img} />
+      <img className='w-100' src={dash_img} alt={dash_img} />
 
-      <div className='container gap-5 mt-5 d-flex flex-wrap'>
+      <div className='container gap-5 mt-5 d-flex flex-wrap justify-content-center'>
         {services.map((curElm, index) => {
           return (
             <>
-              <div key={index} className="card p-4" style={{ width: "25rem", background: `${curElm.card_style.card_bg}`, color: `${curElm.card_style.card_color}` }}>
+              <div key={index} className="card p-4 col-12 col-md-5 col-lg-3" style={{ minWidth: "1rem", background: `${curElm.card_style.card_bg}`, color: `${curElm.card_style.card_color}` }}>
                 <h1 className="card-title text-center" style={{ fontWeight: "900" }} >{curElm.name}</h1>
                 <div className='d-flex justify-content-center'>
                   <button type="button" class="btn btn-outline-dark my-4" style={{ fontSize: "1rem", background: `${curElm.card_style.btn_bg}`, color: `${curElm.card_style.btn_color}`, display: "flex", flexDirection: "row", paddingBottom: "0", gap: ".5rem", alignItems: "center", cursor: "pointer" }}> <p className='p-0 m-1' >{curElm.contact}</p> <span className='fw-bold'>{'>'}</span></button>

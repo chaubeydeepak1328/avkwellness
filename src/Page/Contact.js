@@ -6,8 +6,8 @@ const Contact = () => {
     <>
       <img className='w-100' src={dash_img} alt={dash_img} />
 
-      <div className='w-100 d-flex flex-row flex-wrap gap-5 col-12 col-lg-5 px-2 px-lg-5 ' style={{ marginTop: "4rem", color: "gray" }}>
-        <div className='d-flex flex-column'>
+      <div className='w-100 d-flex flex-row flex-wrap gap-5 col-12 col-lg-5 px-2 px-lg-5 justify-content-center ' style={{ marginTop: "4rem", color: "gray" }}>
+        <div className='d-flex flex-column col-12 col-md-10 col-lg-6'>
           <h2 style={{ color: "#65A29D" }}>Get In Touch</h2>
           <h4 style={{ color: "#D67D9D" }}> Information</h4>
           <p>For more information about the Wellness Advocacy Programme and how to get started, please contact us at:</p>
@@ -40,7 +40,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className='card d-flex flex-column p-3 pt-4 col-12 col-lg-5' style={{ background: "#f5f5f5", color: "gray" }}>
+        <div className='card d-flex flex-column p-3 pt-4 col-12 col-lg-5' style={{ background: "#f5f5f5", color: "gray", maxWidth: "30rem" }}>
           <h4 style={{ color: "#D67D9D" }}>Send Us Message</h4>
           <p>Join us in advocating for wellnwss and making positive difference in lives of employees across india!</p>
           <form action="#" className='d-flex flex-column gap-3'>

@@ -8,7 +8,7 @@ import { Team } from '../config/Api';
 
 const About = () => {
     return (
-        <div>
+        <>
             <div className='w-100' style={{ position: "relative" }}>
                 <img className='w-100' src={dash_img} alt={dash_img} />
                 <div style={{
@@ -37,8 +37,8 @@ const About = () => {
             </div>
 
 
-            <div className='container d-flex flex-column align-items-center justify-content-center' style={{ marginTop: "5rem" }}>
-                <div className='w-100'><h1>Our Mission</h1></div>
+            <div className='container d-flex flex-column align-items-center justify-content-center w-100' style={{ marginTop: "5rem" }}>
+                <div className='w-100'><h1 className='px-lg-5 mx-lg-5'>Our Mission</h1></div>
                 <div class="card d-flex flex-lg-row col-12 col-lg-10">
                     <div className='py-lg-5 col-lg-5' >
                         <img class="card-img-top" src={img3} alt={img3} />
@@ -53,13 +53,13 @@ const About = () => {
             </div>
 
 
-            <div style={{ marginTop: "5rem" }}>
+            <div className='w-100' style={{ marginTop: "5rem" }}>
                 <h1 className='text-center py-4'>Our Team</h1>
-                <div className='row d-flex justify-content-center flex-wrap gap-5'>
+                <div className='d-flex justify-content-center flex-wrap gap-5'>
                     {Team.map((curElm, index) => {
                         return (
-                            <div className='card col-11 col-lg-3' key={index} style={{ width: "24rem" }}>
-                                <img class="card-img-top" src={curElm.img} alt={curElm.img} />
+                            <div className='card col-11 col-lg-3' key={index}>
+                                <img class="card-img-top w-100" src={curElm.img} alt={curElm.img} />
                                 <div className='card-body'>
                                     <h6 className='card-text' style={{ fontSize: "1.4rem" }}>{curElm.name}</h6>
                                 </div>
@@ -68,7 +68,7 @@ const About = () => {
                     })}
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

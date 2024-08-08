@@ -84,7 +84,7 @@ const Navbar = () => {
                             <hr />
                             <NavLink to="program" className="text-decoration-none text-black">PROGRAM</NavLink>
                             <hr />
-                            <NavLink to="out-team" className="text-decoration-none text-black">OUR TEAM</NavLink>
+                            <NavLink to="our-team" className="text-decoration-none text-black">OUR TEAM</NavLink>
                             <hr />
                             <NavLink to="services" className="text-decoration-none text-black">SERVICES</NavLink>
                             <hr />
